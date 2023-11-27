@@ -6,7 +6,8 @@ from lib.utils import setup_seed
 from configs.models import architectures
 from models.model import Model
 import torch
-from pointscope import PointScopeClient as PSC
+# from pointscope import PointScopeClient as PSC
+from pointscope import PointScopeVedo as PSC
 
 
 setup_seed(0)
@@ -36,4 +37,6 @@ if __name__ == '__main__':
     model.eval()
     src_pcd, tgt_pcd, est_tsfm = model.demo()
 
-    PSC().vedo(subplot=2).add_pcd(src_pcd).add_pcd(tgt_pcd).draw_at(1).add_pcd(src_pcd, est_tsfm).add_pcd(tgt_pcd).show()
+    # PSC().vedo(subplot=2).add_pcd(src_pcd).add_pcd(tgt_pcd).draw_at(1).add_pcd(src_pcd, est_tsfm).add_pcd(tgt_pcd).show()
+    PSC(subplot=2).add_pcd(src_pcd).add_pcd(tgt_pcd).draw_at(1).add_pcd(src_pcd, est_tsfm).add_pcd(tgt_pcd).show()
+    
