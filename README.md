@@ -1,5 +1,5 @@
 ## SemReg: Semantics Constrained Point Cloud Registration
-
+CVPR 2024 submission
 
 ### Installation 
 
